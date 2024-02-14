@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('fondo1.jpeg');
+}
+
+</style>
+</head>
+<body>
+<center>
+
+<h1 style="color: white">Buscador de Tiendas</h1>
+
+<p style="color: white"> Introduce el nombre de la tienda (en MAYUSCULAS):</p>
+
+<input type="text" id="nombreTienda" name="nombreTienda">
+<button onclick="buscarTienda()">Buscar</button>
+
+<p id="resultado"></p>
+
+<script>
+// Diccionario de tiendas
+var tiendas = {
+  "JESUS": "001",
+  "MC DONALDS VALLEJO": "002",
+  "NORMAL SAN MATEO": "003",
+  "LA CHONA": "004"
+  // Agrega más tiendas aquí
+};
+
+function buscarTienda() {
+  var nombreTienda = document.getElementById("nombreTienda").value;
+  var numeroTienda = tiendas[nombreTienda];
+  
+  if (numeroTienda) {
+    document.getElementById("resultado").innerHTML = "El número de la tienda " + nombreTienda + " es " + numeroTienda + ".";
+  } else {
+    document.getElementById("resultado").innerHTML = "No se encontró la tienda " + nombreTienda + ".";
+  }
+}
+</script>
+
+</center>
+</p>
+</body>
+</html>
